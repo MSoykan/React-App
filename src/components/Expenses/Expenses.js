@@ -1,8 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
-import "./Expenses.css";
-import Card from './Card';
+import "./Expenses.css"; // we dont need to but we can import react
+import Card from '../UI/Card'; // --> because we are using css (JSX)
 
-function Expenses(props) {
+const Expenses = (props) => {
   return (
     <Card className="expenses">
       <ExpenseItem
