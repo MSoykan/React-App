@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css"; // we dont need to but we can import react
 import Card from '../UI/Card'; // --> because we are using css (JSX)

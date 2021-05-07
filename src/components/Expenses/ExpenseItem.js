@@ -1,3 +1,4 @@
+
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
@@ -9,16 +10,16 @@ const ExpenseItem = (props) => {
   const expenseTitle = "Car Insurance";
   const expenseAmount = 294.67;
   */
-  const [title, setTitle] = useState(props.title); // cant be called oıutside of the function 
-  // also cant be called inside otther nested functions 
-
+  const [title, setTitle] = useState(props.title); // cant be called oıutside of the function
+  console.log("ExpenseItem evaluated by React");
+  // also cant be called inside otther nested functions
 
   const clickHandler = () => {
-    setTitle('Updated!');
+    setTitle("Updated!");
+    console.log(title);
     //When we use setTitle we are not just assigning new
     // value to the variable we also re-evaluate the component
     // which this function was called in
- 
   };
 
   // We create clickHandler outside onClick to keep the code clean
