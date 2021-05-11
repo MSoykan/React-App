@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
@@ -25,6 +25,11 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
   /*
   const para = document.createElement('p');
   para.textContent = ' This is also viable'; 
@@ -33,14 +38,14 @@ const App = () => {
   */
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expensesData={expenses} />
     </div>
     // *** lowercase elements are built in HTML elements
     // *** Wheras elemts start with uppercase are my or another
     // programmers code
   );
-}
+};
 
 export default App;
 
