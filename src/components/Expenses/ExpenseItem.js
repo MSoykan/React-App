@@ -14,13 +14,13 @@ const ExpenseItem = (props) => {
   console.log("ExpenseItem evaluated by React");
   // also cant be called inside otther nested functions
 
-  const clickHandler = () => {
-    setTitle("Updated!");
-    console.log(title);
-    //When we use setTitle we are not just assigning new
-    // value to the variable we also re-evaluate the component
-    // which this function was called in
-  };
+  // const clickHandler = () => {
+  //   setTitle("Updated!");
+  //   console.log(title);
+  //   //When we use setTitle we are not just assigning new
+  //   // value to the variable we also re-evaluate the component
+  //   // which this function was called in
+  // };
 
   // We create clickHandler outside onClick to keep the code clean
   // --> leaner in this case.
@@ -30,10 +30,10 @@ const ExpenseItem = (props) => {
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item__price">{props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
     </Card>
   );
 };
