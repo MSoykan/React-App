@@ -27,15 +27,15 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
       console.log("I am here");
       console.log(prevExpenses);
       return [expense, ...prevExpenses];
-      
     });
   };
+
+  const returnFilterYear = (year) => {};
 
   /*
   const para = document.createElement('p');
@@ -46,7 +46,7 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses expensesData={expenses} />
+      <Expenses expensesData={expenses} getFilterYear={returnFilterYear} />
     </div>
     // *** lowercase elements are built in HTML elements
     // *** Wheras elemts start with uppercase are my or another

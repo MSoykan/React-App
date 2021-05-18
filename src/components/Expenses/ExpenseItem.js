@@ -2,7 +2,7 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
-import React, { useState } from "react";
+import React from "react";
 
 const ExpenseItem = (props) => {
   /*
@@ -10,8 +10,8 @@ const ExpenseItem = (props) => {
   const expenseTitle = "Car Insurance";
   const expenseAmount = 294.67;
   */
-  const [title, setTitle] = useState(props.title); // cant be called oıutside of the function
-  console.log("ExpenseItem evaluated by React");
+  // const [title, setTitle] = useState(props.title); // cant be called oıutside of the function
+  // console.log("ExpenseItem evaluated by React");
   // also cant be called inside otther nested functions
 
   // const clickHandler = () => {
