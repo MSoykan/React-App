@@ -2,7 +2,7 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
-import React, { useState } from "react";
+import React from "react";
 
 const ExpenseItem = (props) => {
   /*
@@ -10,17 +10,17 @@ const ExpenseItem = (props) => {
   const expenseTitle = "Car Insurance";
   const expenseAmount = 294.67;
   */
-  const [title, setTitle] = useState(props.title); // cant be called oıutside of the function
-  console.log("ExpenseItem evaluated by React");
+  // const [title, setTitle] = useState(props.title); // cant be called oıutside of the function
+  // console.log("ExpenseItem evaluated by React");
   // also cant be called inside otther nested functions
 
-  const clickHandler = () => {
-    setTitle("Updated!");
-    console.log(title);
-    //When we use setTitle we are not just assigning new
-    // value to the variable we also re-evaluate the component
-    // which this function was called in
-  };
+  // const clickHandler = () => {
+  //   setTitle("Updated!");
+  //   console.log(title);
+  //   //When we use setTitle we are not just assigning new
+  //   // value to the variable we also re-evaluate the component
+  //   // which this function was called in
+  // };
 
   // We create clickHandler outside onClick to keep the code clean
   // --> leaner in this case.
@@ -30,10 +30,10 @@ const ExpenseItem = (props) => {
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
-        <h2>{title}</h2>
+        <h2>{props.title}</h2>
         <div className="expense-item__price">{props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
     </Card>
   );
 };

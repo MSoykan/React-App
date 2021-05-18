@@ -8,7 +8,9 @@ const NewExpense = (props) => {
     const expenseData = {
       ...enteredExpenseData,
       id: Math.random().toString(),
+      
     };
+  //  console.log(enteredExpenseData.date.getFullYear());
     props.onAddExpense(expenseData);
   };
   return (
